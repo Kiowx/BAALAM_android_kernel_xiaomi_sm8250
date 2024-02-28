@@ -1876,7 +1876,6 @@ static __latent_entropy struct task_struct *copy_process(
 	p = dup_task_struct(current, node);
 	if (!p)
 		goto fork_out;
-       p->hide=0
 	cpufreq_task_times_init(p);
 
 #if IS_ENABLED(CONFIG_PACKAGE_RUNTIME_INFO)
