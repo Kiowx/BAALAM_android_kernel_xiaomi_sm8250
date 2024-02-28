@@ -740,13 +740,9 @@ __SYSCALL(__NR_rseq, sys_rseq)
 __SYSCALL(__NR_pidfd_send_signal, sys_pidfd_send_signal)
 #define __NR_pidfd_open 434
 __SYSCALL(__NR_pidfd_open, sys_pidfd_open)
-#define __NR_hide 436
-__SYSCALL(__NR_hide,sys_hide)
-#define __NR_unhide 437
-__SYSCALL(__NR_unhide,sys_unhide)
 
 #undef __NR_syscalls
-#define __NR_syscalls 437
+#define __NR_syscalls 435
 
 /*
  * 32 bit systems traditionally used different
