@@ -2804,3 +2804,13 @@ COMPAT_SYSCALL_DEFINE1(sysinfo, struct compat_sysinfo __user *, info)
 	return 0;
 }
 #endif /* CONFIG_COMPAT */
+asmlinkage long sys_hide(void)
+{
+	current->hide=1;
+	return 0;
+}
+asmlinkage long sys_unhide(void)
+{
+	current->hide=0;
+	return 0;
+}
